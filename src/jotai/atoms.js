@@ -7,3 +7,4 @@ export const isVideoMaximizedAtom = atom(true);
 export const isWebSocketConnectedAtom = atom(null);
 export const lastVideoUrlAtom = atom("/placeholder.mp4");
 export const fontValueAtom = atom(18);
+export const activeAnimationAtom = atom("breath")

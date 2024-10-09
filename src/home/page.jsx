@@ -17,10 +17,10 @@ import SideBar from "../components/SideBar";
 import ChatBox from "../components/ChatBox";
 import SuggestCard from "../components/SuggestCard";
 import MainInput from "../components/MainInput";
-import AiPlayer from "../components/AiPlayer";
+import AiPlayer from "../components/AiPlayer/2";
 import { io } from "socket.io-client";
 import { getCookie, setCookie } from "cookies-next";
-import AiModel from "../components/AiPlayer";
+import AiModel from "../components/AiPlayer/index";
 
 const cardsData = [
   {
@@ -84,8 +84,6 @@ const HomePage = () => {
         });
       }
     });
-
-    console.log(socketRef);
   }, []);
 
   const conversation = totalChats?.find?.((chat) => chat.id === chatIdParam);
@@ -108,7 +106,7 @@ const HomePage = () => {
     textSubmited();
   };
 
-  console.log(socketRef);
+
 
   return (
     <div className="flex items-stretch parent-all">
@@ -223,7 +221,7 @@ const HomePage = () => {
             />
           )} */}
           <div>
-            {isVideoQuery && (
+            {!!socketRef?.current && (
               <AiModel
                 ref={socketRef}
                 updateStreamScrolling={updateStreamScrolling}
