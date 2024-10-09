@@ -1,0 +1,16 @@
+.rangeInput::-webkit-slider-thumb {
+  /* background-color: #a59898;
+  border-radius: 50%;
+
+  cursor: pointer;
+  border: 8px solid #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); */
+}
+
+.rangeInput::-webkit-slider-runnable-track {
+  background-color: #d2dede;
+
+  border-radius: 8px;
+  /* width: 130px;
+  top: 436px; */
+}

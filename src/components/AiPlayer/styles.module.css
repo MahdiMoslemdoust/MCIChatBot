@@ -1,0 +1,19 @@
+.vidBox {
+  height: 100%;
+  width: 100%;
+  /* overflow-x: hidden; */
+  direction: ltr;
+  position: relative;
+  background: red !important;
+}
+
+.vidBox * {
+  direction: ltr;
+  width: 100%;
+  height: 100%;
+}
+
+.vidBox .vjs-loading-spinner {
+  width: 40px !important;
+  height: 40px !important;
+}
